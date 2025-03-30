@@ -255,7 +255,7 @@ class Home {
         });
 
         launch.on('progress', (progress, size) => {
-            infoStarting.innerHTML = `Downloading: ${((progress / size) * 100).toFixed(0)}%`
+            infoStarting.innerHTML = `Téléchargement: ${((progress / size) * 100).toFixed(0)}%`
             ipcRenderer.send('main-window-progress', { progress, size })
             progressBar.value = progress;
             progressBar.max = size;
