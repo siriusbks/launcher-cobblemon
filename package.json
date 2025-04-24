@@ -1,7 +1,7 @@
 {
     "name": "CobblemonLauncher",
     "preductname": "CobblemonLauncher",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Launcher minecraft Cobblemon Star Academy",
     "main": "src/app.js",
     "author": {
