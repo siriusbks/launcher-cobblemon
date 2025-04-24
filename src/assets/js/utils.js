@@ -98,12 +98,12 @@ async function setStatus(opt) {
     if (!statusServer.error) {
         statusServerElement.classList.remove('red')
         document.querySelector('.status-player-count').classList.remove('red')
-        /* statusServerElement.innerHTML = `Online - ${statusServer.ms} ms` */
+        statusServerElement.innerHTML = `En ligne - ${statusServer.ms} ms`
         playersOnline.innerHTML = statusServer.playersConnect
     } else {
         statusServerElement.classList.add('red')
         statusServerElement.innerHTML = `Hors ligne`
-        /* document.querySelector('.status-player-count').classList.add('red') */
+        document.querySelector('.status-player-count').classList.add('red')
         playersOnline.innerHTML = '0'
     }
 }

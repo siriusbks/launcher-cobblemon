@@ -18,7 +18,7 @@ function destroyWindow() {
 function createWindow() {
     destroyWindow();
     updateWindow = new BrowserWindow({
-        title: "Updating...",
+        title: "Mise à jour",
         width: 400,
         height: 500,
         resizable: false,

@@ -1,9 +1,8 @@
 {
     "name": "CobblemonLauncher",
     "preductname": "CobblemonLauncher",
-    "productname": "CobblemonLauncher",
-    "version": "1.0.1",
-    "description": "A lightweight custom Minecraft Launcher",
+    "version": "1.0.2",
+    "description": "Launcher minecraft Cobblemon Star Academy",
     "main": "src/app.js",
     "author": {
         "name": "NBSTUDIO",
@@ -17,7 +16,7 @@
         "build": "node build.js --obf=true --build=platform",
         "icon": "node build.js --icon=https://raw.githubusercontent.com/siriusbks/launcher-cobblemon/main/resources/logo.png"
     },
-    "license": "CCANC",
+    "license": "MIT",
     "nodemonConfig": {
         "ext": "js,html,css",
         "ignore": "**/test"
