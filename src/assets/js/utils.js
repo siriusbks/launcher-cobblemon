@@ -84,7 +84,7 @@ async function setStatus(opt) {
 
     if (!opt) {
         statusServerElement.classList.add('red')
-        statusServerElement.innerHTML = `Offline`
+        statusServerElement.innerHTML = `Hors ligne`
         document.querySelector('.status-player-count').classList.add('red')
         playersOnline.innerHTML = '0'
         return
@@ -102,7 +102,7 @@ async function setStatus(opt) {
         playersOnline.innerHTML = statusServer.playersConnect
     } else {
         statusServerElement.classList.add('red')
-        statusServerElement.innerHTML = `Offline`
+        statusServerElement.innerHTML = `Hors ligne`
         /* document.querySelector('.status-player-count').classList.add('red') */
         playersOnline.innerHTML = '0'
     }
