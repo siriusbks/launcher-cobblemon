@@ -25,7 +25,19 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Avada Kedavra", "author": "6rius" },
+            { message: "Attrapez-les tous... ou pas.", author: "6rius" },
+            { message: "Le serveur est plus stable que ta connexion.", author: "6rius" },
+            { message: "Cobblemon, mais avec du style.", author: "6rius" },
+            { message: "Chargement de 151 Poké-lignes de code...", author: "6rius" },
+            { message: "Pikachu a tout validé.", author: "6rius" },
+            { message: "Un monde magique t'attend...", author: "6rius" },
+            { message: "JavaScript utilisé à 100% de sa puissance !", author: "6rius" },
+            { message: "Tu ne survivras pas au premier Rattata shiny.", author: "6rius" },
+            { message: "Connexion au monde parallèle...", author: "6rius" },
+            { message: "Ne pas nourrir les Creepers.", author: "6rius" },
+            { message: "Mods à jour, hype activée.", author: "6rius" },
+            { message: "Un jour, ce launcher dominera le monde.", author: "6rius" },
+            { message: "Es-tu prêt pour l'aventure ? Trop tard.", author: "6rius" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
