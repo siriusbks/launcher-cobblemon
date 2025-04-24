@@ -139,7 +139,7 @@ class Launcher {
                     console.log(`Account Type: ${account.meta.type} | Username: ${account.name}`);
                     popupRefresh.openPopup({
                         title: 'Connexion',
-                        content: `Refresh account Type: ${account.meta.type} | Username: ${account.name}`,
+                        content: `Actualisation du compte. Type : ${account.meta.type} | Username: ${account.name}`,
                         color: 'var(--color)',
                         background: false
                     });
@@ -164,7 +164,7 @@ class Launcher {
                     console.log(`Account Type: ${account.meta.type} | Username: ${account.name}`);
                     popupRefresh.openPopup({
                         title: 'Connexion',
-                        content: `Refresh account Type: ${account.meta.type} | Username: ${account.name}`,
+                        content: `Actualisation du compte. Type : ${account.meta.type} | Username: ${account.name}`,
                         color: 'var(--color)',
                         background: false
                     });
@@ -188,7 +188,7 @@ class Launcher {
                     console.log(`Account Type: ${account.meta.type} | Username: ${account.name}`);
                     popupRefresh.openPopup({
                         title: 'Connexion',
-                        content: `Refresh account Type: ${account.meta.type} | Username: ${account.name}`,
+                        content: `Actualisation du compte. Type : ${account.meta.type} | Username: ${account.name}`,
                         color: 'var(--color)',
                         background: false
                     });

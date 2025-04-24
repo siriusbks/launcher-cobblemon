@@ -56,14 +56,14 @@ class Splash {
     }
 
     async checkUpdate() {
-        this.setStatus(`Checking for Updates...`);
+        this.setStatus(`Vérification des mises à jour...`);
 
         ipcRenderer.invoke('update-app').then().catch(err => {
-            return this.shutdown(`Error while checking for updates:<br>${err.message}`);
+            return this.shutdown(`Erreur lors de la vérification des mises à jour:<br>${err.message}`);
         });
 
         ipcRenderer.on('updateAvailable', () => {
-            this.setStatus(`Update Avaliable!`);
+            this.setStatus(`Mise à jour disponible !`);
             if (os.platform() == 'win32') {
                 this.toggleProgress();
                 ipcRenderer.send('start-update');
@@ -81,7 +81,7 @@ class Splash {
         })
 
         ipcRenderer.on('update-not-available', () => {
-            console.error("No Updates Avaliable.");
+            console.error("Aucune mise à jour disponible.");
             this.maintenanceCheck();
         })
     }
@@ -110,10 +110,10 @@ class Splash {
         else if (os == 'linux') latest = this.getLatestReleaseForOS('linux', '.appimage', latestRelease);
 
 
-        this.setStatus(`Update available!<br><div class="download-update">Download</div>`);
+        this.setStatus(`Mise à jour disponible !<br><div class="download-update">Download</div>`);
         document.querySelector(".download-update").addEventListener("click", () => {
             shell.openExternal(latest.browser_download_url);
-            return this.shutdown("Downloading...");
+            return this.shutdown("Téléchargement...");
         });
     }
 
@@ -124,21 +124,21 @@ class Splash {
             this.startLauncher();
         }).catch(e => {
             console.error(e);
-            return this.shutdown("No internet connection,<br>please try again later.");
+            return this.shutdown("Pas de connexion Internet,<br>veuillez réessayer plus tard.");
         })
     }
 
     startLauncher() {
-        this.setStatus(`Starting...`);
+        this.setStatus(`Lancement...`);
         ipcRenderer.send('main-window-open');
         ipcRenderer.send('update-window-close');
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Closing in 5s`);
+        this.setStatus(`${text}<br>Fermeture dans 5s`);
         let i = 4;
         setInterval(() => {
-            this.setStatus(`${text}<br>Closing in ${i--}s`);
+            this.setStatus(`${text}<br>Fermeture dans ${i--}s`);
             if (i < 0) ipcRenderer.send('update-window-close');
         }, 1000);
     }

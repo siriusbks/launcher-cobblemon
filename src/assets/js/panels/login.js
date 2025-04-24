@@ -33,8 +33,8 @@ class Login {
 
         microsoftBtn.addEventListener("click", () => {
             popupLogin.openPopup({
-                title: 'Connecting to Mojang...',
-                content: 'Please wait...',
+                title: 'Connexion à Mojang...',
+                content: 'Veuillez patienter...',
                 color: 'var(--color)'
             });
 
