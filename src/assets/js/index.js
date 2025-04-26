@@ -9,7 +9,6 @@ class Splash {
     constructor() {
         this.splash = document.querySelector(".splash");
         this.splashMessage = document.querySelector(".splash-message");
-        this.splashAuthor = document.querySelector(".splash-author");
         this.message = document.querySelector(".message");
         this.progress = document.querySelector(".progress");
         document.addEventListener('DOMContentLoaded', async () => {
@@ -25,23 +24,22 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { message: "Attrapez-les tous... ou pas.", author: "6rius" },
-            { message: "Le serveur est plus stable que ta connexion.", author: "6rius" },
-            { message: "Cobblemon, mais avec du style.", author: "6rius" },
-            { message: "Chargement de 151 Poké-lignes de code...", author: "6rius" },
-            { message: "Pikachu a tout validé.", author: "6rius" },
-            { message: "Un monde magique t'attend...", author: "6rius" },
-            { message: "JavaScript utilisé à 100% de sa puissance !", author: "6rius" },
-            { message: "Tu ne survivras pas au premier Rattata shiny.", author: "6rius" },
-            { message: "Connexion au monde parallèle...", author: "6rius" },
-            { message: "Ne pas nourrir les Creepers.", author: "6rius" },
-            { message: "Mods à jour, hype activée.", author: "6rius" },
-            { message: "Un jour, ce launcher dominera le monde.", author: "6rius" },
-            { message: "Es-tu prêt pour l'aventure ? Trop tard.", author: "6rius" }
+            { message: "Attrapez-les tous... ou pas." },
+            { message: "Le serveur est plus stable que ta connexion." },
+            { message: "Cobblemon, mais avec du style." },
+            { message: "Chargement de 151 Poké-lignes de code..." },
+            { message: "Pikachu a tout validé." },
+            { message: "Un monde magique t'attend..." },
+            { message: "JavaScript utilisé à 100% de sa puissance !" },
+            { message: "Tu ne survivras pas au premier Rattata shiny." },
+            { message: "Connexion au monde parallèle..." },
+            { message: "Ne pas nourrir les Creepers." },
+            { message: "Mods à jour, hype activée." },
+            { message: "Un jour, ce launcher dominera le monde." },
+            { message: "Es-tu prêt pour l'aventure ? Trop tard." }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
-        this.splashAuthor.children[0].textContent = "- " + splash.author;
         await sleep(100);
         document.querySelector("#splash").style.display = "block";
         await sleep(500);
@@ -49,7 +47,6 @@ class Splash {
         await sleep(500);
         this.splash.classList.add("translate");
         this.splashMessage.classList.add("opacity");
-        this.splashAuthor.classList.add("opacity");
         this.message.classList.add("opacity");
         await sleep(1000);
         this.checkUpdate();
